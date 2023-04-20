@@ -1,0 +1,15 @@
+diff a/RegisterForm.cs b/RegisterForm.cs	(rejected hunks)
+@@ -20,10 +20,12 @@
+         private const int MAX_LENGTH = 20;
+         private const int MIN_LENGTH = 5;
+         private IUserRepository _userRepository;
+-        public RegisterForm(IUserRepository userRepository)
++        private IBookRepository _bookRepository;
++        public RegisterForm(IUserRepository userRepository, IBookRepository bookRepository)
+         {
+             InitializeComponent();
+             _userRepository = userRepository;
++            _bookRepository = bookRepository;
+         }
+ 
+         private void RegisterPageRegisterButton_Click(object sender, EventArgs e)
